@@ -1,0 +1,10 @@
+C:\Users\alane\source\repos\SQL\SQL\bin\Debug\SQL.exe.config
+C:\Users\alane\source\repos\SQL\SQL\bin\Debug\SQL.exe
+C:\Users\alane\source\repos\SQL\SQL\bin\Debug\SQL.pdb
+C:\Users\alane\source\repos\SQL\SQL\bin\Debug\Entidades.dll
+C:\Users\alane\source\repos\SQL\SQL\bin\Debug\Entidades.pdb
+C:\Users\alane\source\repos\SQL\SQL\obj\Debug\SQL.csprojAssemblyReference.cache
+C:\Users\alane\source\repos\SQL\SQL\obj\Debug\SQL.csproj.CoreCompileInputs.cache
+C:\Users\alane\source\repos\SQL\SQL\obj\Debug\SQL.csproj.CopyComplete
+C:\Users\alane\source\repos\SQL\SQL\obj\Debug\SQL.exe
+C:\Users\alane\source\repos\SQL\SQL\obj\Debug\SQL.pdb
