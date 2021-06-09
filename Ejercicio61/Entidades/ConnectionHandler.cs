@@ -12,7 +12,6 @@ namespace Entidades
         public static void InsertPerson(Person persona)
         {
             String connectionStr = @"Data Source=.; Initial Catalog = productos; Integrated Security = True";
-            int columnasAfectadas = 0;
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionStr))
@@ -28,7 +27,7 @@ namespace Entidades
                     command.Parameters.AddWithValue("@nombre", persona.GetNombre);
                     command.Parameters.AddWithValue("@apellido", persona.GetApellido);
 
-                    columnasAfectadas = command.ExecuteNonQuery();
+                    int columnasAfectadas = command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -40,7 +39,6 @@ namespace Entidades
         public static void EditPerson(Person persona)
         {
             String connectionStr = @"Data Source=.; Initial Catalog = productos; Integrated Security = True";
-            int columnasAfectadas = 0;
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionStr))
@@ -56,7 +54,7 @@ namespace Entidades
                     command.Parameters.AddWithValue("@nombre", persona.GetNombre);
                     command.Parameters.AddWithValue("@apellido", persona.GetApellido);
 
-                    columnasAfectadas = command.ExecuteNonQuery();
+                    int columnasAfectadas = command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -67,7 +65,6 @@ namespace Entidades
 
         public static Person GetById(int id)
         {
-            Person persona = null;
             String connectionStr = @"Data Source=.; Initial Catalog = productos; Integrated Security = True";
 
             SqlConnection connection = new SqlConnection(connectionStr);
@@ -84,7 +81,7 @@ namespace Entidades
             {
                 throw new Exception("Persona no encontrada");
             }
-            persona = new Person(Convert.ToInt32(dataReader["id"]), dataReader["nombre"].ToString(), dataReader["apellido"].ToString());
+            Person persona = new Person(Convert.ToInt32(dataReader["id"]), dataReader["nombre"].ToString(), dataReader["apellido"].ToString());
             dataReader.Close();
             connection.Close();
             return persona;
